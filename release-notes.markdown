@@ -3,6 +3,45 @@ layout: scalastyle
 title: "Scalastyle - Release notes"
 ---
 
+Version 0.9.0
+=============
+
+New rules:
+
+ * PackageNamesChecker - check package names against a regular expression
+ * EmptyInterpolatedStringChecker - check for empty string interpolations
+ * NoWhitespaceBeforeRightBracketChecker  - check for whitespace before right brackets
+ * MethodArgumentNamesChecker - check method arguments against a reguilar expression
+ * OverrideJavaChecker - Check for use of java Override annotation
+ * NamedArgumentChecker - Checks that argument literals are named
+
+Additions / bugfixes:
+
+ * Supports scala 2.12
+ * Fix: #260 - Not all interpolation types require variables
+ * Fix: #199 and #255 FieldNamesChecker desctructuring and object fields
+ * Fix: #253 Enforce ScalaDoc indentation
+ * Fix: #224 ScalaDocChecker supports comments inheritance
+ * Fix: #225 ScalaDocChecker takes into account valid constrained type parameter declarations
+ * Fix: #217 Add a CyclomaticComplexityChecker option to ignore "case" keyword
+ * Add parameter ignoreComments to MethodLengthChecker
+ * Fix: #204 NullChecker option to tolerate comparisons with null
+ * Fix: #236 ImportsChecker: allow actual lexicographic sorting
+ * Fix: #234 Add "exceptions" param for UnderscoreImportChecker
+ * Merge pull request #153 classParamIndentSize in indentation checker
+ * BUGFIX Class and Object name check entire name
+ * Fix: #201 ScalaDocChecker: Add ignoreTokenTypes option
+ * Fix: #220 Add "ignoreRegex" param for UnderscoreImportChecker
+ * Fix: #194    Fix indentation check for classes where invocation is mistaken for a parameter list
+ * option to ignore entire lines of whitespace for WhitespaceEndOfLineChecker
+ * Improvements in error messages
+
+SBT:
+
+ * Fix: #45 Fix scalastyleConfig in multi-project builds
+ * Fix: #52 Upgrade to AutoPlugin
+ * Add a new "silent" parameter - suppress logging of results to the sbt log
+
 Version 0.8.0
 =============
 

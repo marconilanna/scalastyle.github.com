@@ -23,15 +23,15 @@ Default phase of execution is `verify`. The following is an example of a configu
           &lt;plugin&gt;
             &lt;groupId&gt;org.scalastyle&lt;/groupId&gt;
             &lt;artifactId&gt;scalastyle-maven-plugin&lt;/artifactId&gt;
-            &lt;version&gt;0.8.0&lt;/version&gt;
+            &lt;version&gt;0.9.0&lt;/version&gt;
             &lt;configuration&gt;
               &lt;verbose&gt;false&lt;/verbose&gt;
               &lt;failOnViolation&gt;true&lt;/failOnViolation&gt;
               &lt;includeTestSourceDirectory&gt;true&lt;/includeTestSourceDirectory&gt;
               &lt;failOnWarning&gt;false&lt;/failOnWarning&gt;
-              &lt;sourceDirectory&gt;${basedir}/src/main/scala&lt;/sourceDirectory&gt;
-              &lt;testSourceDirectory&gt;${basedir}/src/test/scala&lt;/testSourceDirectory&gt;
-              &lt;configLocation&gt;${basedir}/lib/scalastyle_config.xml&lt;/configLocation&gt;
+              &lt;sourceDirectory&gt;${project.basedir}/src/main/scala&lt;/sourceDirectory&gt;
+              &lt;testSourceDirectory&gt;${project.basedir}/src/test/scala&lt;/testSourceDirectory&gt;
+              &lt;configLocation&gt;${project.basedir}/lib/scalastyle_config.xml&lt;/configLocation&gt;
               &lt;outputFile&gt;${project.basedir}/scalastyle-output.xml&lt;/outputFile&gt;
               &lt;outputEncoding&gt;UTF-8&lt;/outputEncoding&gt;
             &lt;/configuration&gt;
@@ -52,8 +52,8 @@ You can also specify multiple source directories if necessary. Replace the &lt;s
 
 <pre>
     &lt;sourceDirectories&gt;
-      &lt;dir&gt;${basedir}/src/main/scala&lt;/dir&gt;
-      &lt;dir&gt;${basedir}/src/main/generated-scala&lt;/dir&gt;
+      &lt;dir&gt;${project.basedir}/src/main/scala&lt;/dir&gt;
+      &lt;dir&gt;${project.basedir}/src/main/generated-scala&lt;/dir&gt;
     &lt;/sourceDirectories&gt;
 </pre>
 
